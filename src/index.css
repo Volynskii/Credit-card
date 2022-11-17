@@ -1,0 +1,191 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+*{
+  font-family: 'Montserrat', sans-serif;
+  margin:0; padding:0;
+  box-sizing: border-box;
+  outline: none; border:none;
+  text-decoration: none;
+  transition: all .2s linear;
+}
+
+
+
+
+
+
+
+
+
+.credit-card {
+  color: white;
+  font-family: Arial;
+  position: relative;
+}
+
+.credit-card .front,
+.credit-card .back {
+  background-color: hsl(200, 80%, 30%);
+  border: 1px solid hsl(200, 80%, 10%);
+  border-radius: .5rem;
+  width: 32.5rem;
+  height: 20rem;
+  padding: .75rem 1rem;
+  padding-bottom: 1.25rem;
+}
+
+.credit-card .front {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  z-index: 1;
+  overflow: hidden;
+  position: relative;
+}
+
+.credit-card .card-data-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: auto;
+  min-height: 5rem;
+}
+
+.credit-card .card-data-row-reverse {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: auto;
+  flex-direction: row-reverse;
+}
+
+.credit-card .logo {
+  height: 4rem;
+  width: 5rem;
+  flex-grow: 0;
+}
+
+.credit-card .brand-name {
+  display: flex;
+  align-items: center;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.credit-card .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: .25rem;
+}
+
+.credit-card fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.credit-card fieldset legend {
+  visibility: hidden;
+  height: 0;
+  width: 0;
+  position: absolute;
+  top: -200vh;
+}
+
+.credit-card .horizontal-input-stack {
+  display: flex;
+  gap: 1.2rem;
+}
+
+.credit-card .cc-inputs input {
+  width: 6ch;
+  font-family: monospace;
+}
+
+.credit-card input,
+.credit-card select {
+  padding: .25em .5em;
+  border: none;
+  border-radius: .25em;
+  appearance: none;
+}
+
+.credit-card label {
+  font-size: .65rem;
+  text-transform: uppercase;
+}
+
+.credit-card .input-row {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 2rem;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.credit-card .name-group {
+  /*flex-grow: 1;*/
+}
+
+.credit-card .front::before {
+  content: "";
+  position: absolute;
+  height: 40rem;
+  width: 40rem;
+  border-radius: 100%;
+  background-color: hsl(0, 0%, 100%, .15);
+  top: -250px;
+  left: -150px;
+  z-index: -1;
+}
+
+.credit-card .front::after {
+  content: "";
+  position: absolute;
+  height: 60rem;
+  width: 60rem;
+  border-radius: 100%;
+  background-color: hsl(0, 0%, 100%, .075);
+  bottom: -47.5rem;
+  left: -15rem;
+  z-index: -1;
+}
+
+.credit-card .back {
+  position: absolute;
+  top: 7rem;
+  left: 5.25rem;
+}
+
+.credit-card .stripe {
+  background-color: hsl(200, 80%, 10%);
+  height: 3.5rem;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 1.5rem;
+}
+
+.credit-card .cvc-group {
+  position: absolute;
+  bottom: 3.25rem;
+  right: .5rem;
+}
+
+.credit-card .cvc-input {
+  width: 5ch;
+  font-family: monospace;
+}
